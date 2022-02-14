@@ -1,0 +1,16 @@
+version: '3.9'
+services:
+  main:
+    build: ./build
+    volumes:
+      - Temp:/home/boxfuse-sample-java-war-hello/target/
+  web:
+    build: ./run
+    ports:
+      - 8082:8080
+    depends_on:
+      - main
+    volumes:
+      - Temp:/usr/local/tomcat/webapps
+volumes:
+  Temp:
