@@ -3,7 +3,7 @@ services:
   main:
     build: ./build
     volumes:
-      - Temp:/home/boxfuse-sample-java-war-hello/target/
+      - Temp:/home/
   web:
     build: ./run
     ports:
