@@ -11,6 +11,6 @@ services:
     depends_on:
       - main
     volumes:
-      - Temp:/home/
+      - Temp:/usr/local/tomcat/webapps
 volumes:
   Temp:
